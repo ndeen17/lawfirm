@@ -143,7 +143,7 @@ export default function Home() {
               <Eyebrow>PRACTICE AREAS</Eyebrow>
               <h2 className="h2">Where we can help</h2>
             </div>
-            <p className="lead lead-sm" style={{ maxWidth: 380 }}>Each area sets out the issues we handle, how the process works and the consultation fee — before you book.</p>
+            <p className="lead lead-sm" style={{ maxWidth: 380 }}>Each area sets out the issues we handle, and how the process works — before you book.</p>
           </div>
           <div className="areas-grid">
             {AREAS.map((a, i) => (
@@ -152,7 +152,7 @@ export default function Home() {
                 <span className="area-b">
                   <span className="area-name">{a.name}</span>
                   <span className="area-desc">{a.blurb}</span>
-                  <span className="area-fee">Consultation from {naira(a.fee)} &nbsp;→</span>
+                  <span className="area-fee">Learn more &nbsp;→</span>
                 </span>
               </Link>
             ))}

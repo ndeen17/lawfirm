@@ -4,7 +4,6 @@ import { useStore } from '../../store';
 import { AREAS, SUPPORT, lawyersForArea } from '../../data/static';
 import { nextOpen } from '../../lib/availability';
 import { dayShort, parseISO } from '../../lib/dates';
-import { naira } from '../../lib/format';
 
 export default function PracticeArea() {
   const { id } = useParams();
@@ -36,7 +35,7 @@ export default function PracticeArea() {
             </div>
             <aside className="book-card" aria-label="Book this service">
               <span className="eyebrow-sm">INITIAL CONSULTATION</span>
-              <span className="book-price"><strong>{naira(area.fee)}</strong> <span>· {area.dur} min</span></span>
+              <span className="book-price"><span>{area.dur} min</span></span>
               <span className="muted-sm">In office, by video or by phone. Includes a written summary of your options afterwards.</span>
               {next && <span className="book-next">Next available: {dayShort(parseISO(next.date))}, {next.time}</span>}
               <button type="button" className="btn btn-accent btn-block" onClick={book}>Book a consultation</button>
@@ -73,18 +72,6 @@ export default function PracticeArea() {
 
       <section className="sec">
         <div className="wrap split split-top" style={{ gap: 64 }}>
-          <div className="stack-18" style={{ flex: '2 1 560px' }}>
-            <h2 className="h2 h2-md">Typical fees</h2>
-            <p className="lead lead-sm">A guide only — your exact fee is confirmed in writing after the consultation. VAT applies.</p>
-            <div className="table-wrap">
-              <table className="fee-table">
-                <thead><tr><th>SERVICE</th><th>FEE TYPE</th><th className="r">FROM</th></tr></thead>
-                <tbody>
-                  {area.fees.map(([s, t, f]) => (<tr key={s}><td>{s}</td><td>{t}</td><td className="r">{f}</td></tr>))}
-                </tbody>
-              </table>
-            </div>
-          </div>
           <div className="bring">
             <h3>What to have ready</h3>
             <span className="muted-sm">You can upload these when you book.</span>
@@ -120,7 +107,7 @@ export default function PracticeArea() {
       <section className="cta-band">
         <div className="wrap cta-in cta-col">
           <h2 className="h2" style={{ color: '#fff' }}>Talk it through with {lead?.name.split(' ')[0]} this week</h2>
-          <p style={{ color: '#C9D0DC', margin: 0 }}>{area.dur} minutes, {naira(area.fee)}, in office or by video.</p>
+          <p style={{ color: '#C9D0DC', margin: 0 }}>{area.dur} minutes, in office or by video.</p>
           <button type="button" className="btn btn-accent" onClick={book}>Book a consultation</button>
         </div>
       </section>
