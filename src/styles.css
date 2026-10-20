@@ -21,7 +21,9 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 16px; -webkit-text-size-adjust: 100%; }
+img, svg, video { max-width: 100%; }
+h1, h2, h3, p, a, span { overflow-wrap: break-word; }
 body { font-family: Outfit, system-ui, -apple-system, 'Segoe UI', sans-serif; color: var(--navy); background: #fff; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 a { color: var(--navy); text-decoration: none; }
 a:hover { color: var(--accent); }
@@ -698,8 +700,86 @@ input[type='checkbox'] { width: 18px; height: 18px; padding: 0; accent-color: va
   .demobar { bottom: 140px; }
 }
 
+/* ---------- scroll reveal ---------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1); }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- extra mobile polish ---------- */
+@media (max-width: 760px) {
+  html { scroll-padding-top: 72px; }
+  .wrap { padding: 0 20px; }
+  .site-header { position: sticky; top: 0; }
+  .main-nav { max-height: calc(100vh - 70px); overflow-y: auto; padding-left: 20px; padding-right: 20px; }
+  .h1, .h1-sm { font-size: 32px; }
+  .h2, .h2-md, .h2-sm { font-size: 28px; }
+  .hero-in { padding-top: 16px; gap: 0; }
+  .hero-copy { flex-basis: 100%; padding: 24px 0 48px; gap: 20px; }
+  .hero-copy p { font-size: 17px; max-width: none; }
+  .hero-cta .btn { width: 100%; }
+  .sec, .sec-tight { padding: 56px 0; }
+  .book-sec { padding: 40px 0 64px; }
+  .statement { padding: 64px 20px 16px; }
+  .statement p { font-size: 21px; }
+  .split, .split-top, .page-hero-in, .profile-main { gap: 36px; }
+  .profile-main { padding-top: 40px; padding-bottom: 64px; }
+  .page-hero { padding: 36px 0 48px; }
+  .quick, .book-card { min-width: 0; flex-basis: 100%; max-width: none; padding: 22px; }
+  .areas-grid, .handles { grid-template-columns: 1fr; }
+  .three, .insight-grid, .offices, .who { grid-template-columns: 1fr; gap: 32px; }
+  .lawyer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
+  .lawyer-ph span { font-size: 44px; }
+  .stats > div { padding: 22px 12px 22px 0; }
+  .stats > div:nth-child(even) { padding: 22px 0 22px 14px; }
+  .stat-n { font-size: 34px; }
+  .tl-y { min-width: 52px; font-size: 22px; }
+  .timeline li { gap: 16px; }
+  .article p { font-size: 17px; }
+  .article-cta, .bring, .info-card { padding: 22px; }
+  .cta-band { padding: 56px 0; }
+  .cta-in .btn { width: 100%; }
+  .site-footer { padding: 48px 0 32px; }
+  input, select, textarea { font-size: 16px; }
+  .tabs { overflow-x: auto; scrollbar-width: none; }
+  .tabs button { white-space: nowrap; }
+  .portal-main { padding-top: 28px; padding-bottom: 64px; }
+  .portal-h1 { font-size: 28px; }
+  .next-btns, .next-btns .btn { width: 100%; }
+  .msg { max-width: 100%; }
+  .data-table, .fee-table { min-width: 560px; }
+  .modal-back { padding: 0; align-items: flex-end; }
+  .modal { max-width: none; max-height: 92vh; border-radius: 12px 12px 0 0; }
+  .modal-foot .btn { flex: 1; }
+  .toasts { top: 12px; right: 12px; left: 12px; max-width: none; }
+  .login-page { padding: 20px 16px 56px; }
+  .login-card, .demo-card { padding: 22px; }
+  .pay-row { grid-template-columns: 1fr; }
+  .done h1 { font-size: 30px; }
+  .sheet-head, .sheet-title { flex-direction: column; align-items: flex-start; }
+  .sheet-addr { text-align: left; }
+  .call-main { margin: 0 12px; }
+  .call-lobby { gap: 24px; padding: 16px; }
+  .call-bar { padding: 14px; flex-wrap: wrap; }
+  .demobar { left: 12px; }
+}
+@media (max-width: 420px) {
+  .wrap { padding: 0 16px; }
+  .logo-name { font-size: 19px; }
+  .hero-copy h1 { font-size: 36px; }
+  .lawyer-grid { grid-template-columns: 1fr; }
+  .day-grid { gap: 4px; }
+  .time-grid { grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); }
+  .choice-grid, .choice-grid-s { grid-template-columns: 1fr; }
+  .pay-methods { grid-template-columns: 1fr; }
+  .tracker { grid-template-columns: 1fr; }
+  .modal-foot { flex-direction: column-reverse; }
+}
+
 @media print {
-  body * { visibility: hidden !important; }
+  body *{ visibility: hidden !important; }
   .print-sheet, .print-sheet * { visibility: visible !important; }
   .modal-back { position: static !important; background: none !important; }
   .modal { box-shadow: none !important; max-height: none !important; }

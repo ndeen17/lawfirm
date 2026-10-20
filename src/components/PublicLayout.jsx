@@ -95,6 +95,22 @@ export default function PublicLayout() {
       window.scrollTo(0, 0);
     }
   }, [loc.pathname, loc.state]);
+
+  // Fade sections in as they scroll into view.
+  useEffect(() => {
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    const t = setTimeout(() => {
+      document.querySelectorAll('.site .sec > .wrap > *, .site .cta-band .wrap, .site .statement p').forEach((el) => {
+        if (el.getBoundingClientRect().top > window.innerHeight) { el.classList.add('reveal'); io.observe(el); }
+      });
+    }, 80);
+    return () => { clearTimeout(t); io.disconnect(); };
+  }, [loc.pathname]);
   return (
     <div className="site">
       <Header />
