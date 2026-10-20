@@ -24,7 +24,7 @@ export default function About() {
           <div className="stack-22" style={{ flex: '1 1 480px' }}>
             <Eyebrow>ABOUT THE FIRM</Eyebrow>
             <h1 className="h1">Good legal advice should be <em>easy to reach</em></h1>
-            <p className="lead">Harbor &amp; Vale is a firm of barristers and solicitors in Lagos and Abuja. We help people and businesses understand where they stand, make good decisions and get things resolved.</p>
+            <p className="lead">John &amp; Doe is a firm of barristers and solicitors in Lagos and Abuja. We help people and businesses understand where they stand, make good decisions and get things resolved.</p>
           </div>
           <div className="stats stats-card">
             {[[FIRM.founded, 'Founded in Lagos'], ['6', 'People on the team'], ['2', 'Offices'], ['5', 'Languages spoken']].map(([n, l]) => (
@@ -40,7 +40,7 @@ export default function About() {
             <Eyebrow>OUR STORY</Eyebrow>
             <h2 className="h2">Started to do things differently</h2>
             <p className="lead">Adaeze Okafor and Tunde Bakare met as young associates at a large commercial firm. They kept seeing the same thing: people who needed a lawyer didn’t know where to start, what it would cost, or whether their problem was even a legal one.</p>
-            <p className="lead">In {FIRM.founded} they started Harbor &amp; Vale to do it differently — honest first conversations, fees agreed upfront, and advice written so clients can act on it. The firm has grown by word of mouth, adding family, property and immigration practices as clients asked for them.</p>
+            <p className="lead">In {FIRM.founded} they started John &amp; Doe to do it differently — honest first conversations, fees agreed upfront, and advice written so clients can act on it. The firm has grown by word of mouth, adding family, property and immigration practices as clients asked for them.</p>
           </div>
           <ol className="timeline">
             {TIMELINE.map(([y, t, d]) => (

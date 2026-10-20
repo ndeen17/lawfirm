@@ -42,7 +42,7 @@ export default function CallRoom() {
   return (
     <div className="call">
       <div className="call-top">
-        <span>Harbor &amp; Vale Legal · {areaById(appt.areaId).bookName}</span>
+        <span>John &amp; Doe Legal · {areaById(appt.areaId).bookName}</span>
         <span className="call-secure">End-to-end encrypted (demo)</span>
       </div>
 

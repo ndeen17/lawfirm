@@ -1,4 +1,4 @@
-# Harbor & Vale Legal — front-end demo
+# John & Doe Legal — front-end demo
 
 React + Vite single-page demo built from "Legal Suite Design Concept". Public website, booking flow, client portal and lawyer/partner workspace, all running on seeded demo data stored in localStorage.
 

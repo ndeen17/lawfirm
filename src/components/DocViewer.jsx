@@ -43,7 +43,7 @@ function InvoiceSheet({ inv, client, kind }) {
         </tbody>
       </table>
       {!paid && <p className="sheet-note">Pay online from your client portal, or by transfer to Harbor Trust Bank, account 0123456789, quoting {inv.id}.</p>}
-      <p className="sheet-foot">Harbor &amp; Vale Legal · Barristers &amp; Solicitors of the Supreme Court of Nigeria</p>
+      <p className="sheet-foot">John &amp; Doe Legal · Barristers &amp; Solicitors of the Supreme Court of Nigeria</p>
     </div>
   );
 }
@@ -66,7 +66,7 @@ function EngagementSheet({ doc, db, canSign, onSign }) {
       <p className="sheet-p"><strong>{client?.name}</strong><br />{client?.email}</p>
       <p className="sheet-p"><strong>Re: {matter ? `${matter.title} (${matter.id})` : doc.name}</strong></p>
       <p className="sheet-p">Dear {client?.name.split(' ')[0]},</p>
-      <p className="sheet-p">Thank you for instructing Harbor &amp; Vale Legal. This letter sets out the terms on which we will act for you{area ? ` in your ${area.bookName.toLowerCase()} matter` : ''}.</p>
+      <p className="sheet-p">Thank you for instructing John &amp; Doe Legal. This letter sets out the terms on which we will act for you{area ? ` in your ${area.bookName.toLowerCase()} matter` : ''}.</p>
       <ol className="sheet-list">
         <li><strong>Scope.</strong> We will advise you, prepare the documents needed and, where agreed, negotiate or represent you in relation to the matter described above. Court proceedings are quoted separately.</li>
         <li><strong>Your lawyer.</strong> {lawyer ? `${lawyer.name} will lead your matter, supported by our paralegal team.` : 'A named lawyer will lead your matter.'}</li>
@@ -74,7 +74,7 @@ function EngagementSheet({ doc, db, canSign, onSign }) {
         <li><strong>Confidentiality.</strong> Everything you tell us is confidential and seen only by your legal team.</li>
         <li><strong>Communication.</strong> We reply within one business day, and post updates to your client portal as your matter moves.</li>
       </ol>
-      <p className="sheet-p">Yours sincerely,<br /><span className="sig">{lawyer?.name || 'Harbor & Vale Legal'}</span><br />Harbor &amp; Vale Legal</p>
+      <p className="sheet-p">Yours sincerely,<br /><span className="sig">{lawyer?.name || 'John & Doe Legal'}</span><br />John &amp; Doe Legal</p>
       <div className="sig-block">
         {signed ? (
           <>

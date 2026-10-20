@@ -1,5 +1,5 @@
 export const FIRM = {
-  name: 'Harbor & Vale Legal',
+  name: 'John & Doe Legal',
   founded: 2014,
   years: 12,
   email: 'hello@harborvale.legal',
@@ -191,7 +191,7 @@ export const LAWYERS = [
     tag: 'Co-founder', quote: 'Leads our corporate practice and advises founders, investors and growing companies.',
     about: [
       'Adaeze advises on company formation, commercial contracts, shareholder arrangements and investment transactions. She works closely with founders from first registration through to funding rounds.',
-      'She co-founded Harbor & Vale in 2014 after practising at a large commercial firm in Lagos, and works from our Victoria Island office.',
+      'She co-founded John & Doe in 2014 after practising at a large commercial firm in Lagos, and works from our Victoria Island office.',
     ],
     edu: ['LL.B, University of Nigeria, Nsukka', 'B.L., Nigerian Law School', 'Called to the Nigerian Bar, 2008'],
     work: ['Company incorporation and governance', 'Shareholder and investment agreements', 'Commercial contract negotiation'],
@@ -202,7 +202,7 @@ export const LAWYERS = [
     tag: 'Co-founder', quote: 'Leads our litigation team and represents clients in court and arbitration.',
     about: [
       'Tunde represents individuals and businesses in commercial disputes, employment matters and debt recovery. He is known for clear case assessments and for settling matters early where that serves the client.',
-      'He co-founded Harbor & Vale in 2014 and splits his time between Lagos and Abuja.',
+      'He co-founded John & Doe in 2014 and splits his time between Lagos and Abuja.',
     ],
     edu: ['LL.B, University of Lagos', 'B.L., Nigerian Law School', 'Called to the Nigerian Bar, 2007'],
     work: ['High Court and appellate advocacy', 'Employment disputes', 'Arbitration and debt recovery'],
@@ -213,7 +213,7 @@ export const LAWYERS = [
     tag: 'Senior Associate', quote: 'Leads our family and divorce practice. Known for steady, practical advice that keeps children at the centre of every decision.',
     about: [
       'Halima advises on divorce, custody, maintenance and the division of family property, and drafts prenuptial agreements for couples in Nigeria and abroad. She prefers negotiated settlements where possible, and is an experienced advocate when a matter needs to go to court.',
-      'Before joining Harbor & Vale in 2018, she practised at a family law firm in Kaduna. She works from our Lagos office, and with clients in the North by video and at our Abuja office.',
+      'Before joining John & Doe in 2018, she practised at a family law firm in Kaduna. She works from our Lagos office, and with clients in the North by video and at our Abuja office.',
     ],
     edu: ['LL.B, Ahmadu Bello University', 'B.L., Nigerian Law School', 'Called to the Nigerian Bar, 2012'],
     work: ['Parenting and custody agreements', 'Uncontested and contested divorce', 'Maintenance and enforcement'],
@@ -224,7 +224,7 @@ export const LAWYERS = [
     tag: 'Associate', quote: 'Handles property transactions and immigration matters for individuals and companies.',
     about: [
       'Chidi handles land and house purchases, title verification and registration, as well as visas, residence permits and expatriate quota applications.',
-      'He joined Harbor & Vale in 2020 and is fluent in French, which helps with clients and companies relocating from francophone Africa and Europe.',
+      'He joined John & Doe in 2020 and is fluent in French, which helps with clients and companies relocating from francophone Africa and Europe.',
     ],
     edu: ['LL.B, University of Benin', 'B.L., Nigerian Law School', 'Called to the Nigerian Bar, 2016'],
     work: ['Land due diligence and title searches', 'Expatriate quota and visas', 'Tenancy and landlord disputes'],

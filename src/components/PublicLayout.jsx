@@ -77,7 +77,7 @@ function Footer() {
           </nav>
         </div>
         <div className="foot-bot">
-          <span>© 2026 Harbor &amp; Vale Legal · Barristers &amp; Solicitors of the Supreme Court of Nigeria</span>
+          <span>© 2026 John &amp; Doe Legal · Barristers &amp; Solicitors of the Supreme Court of Nigeria</span>
           <span className="foot-legal">{link('faq', 'Privacy notice')}{link('faq', 'Terms')}</span>
         </div>
       </div>

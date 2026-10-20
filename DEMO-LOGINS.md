@@ -1,4 +1,4 @@
-# Harbor & Vale Legal — Demo Logins
+# John & Doe Legal — Demo Logins
 
 Front-end only demo. All data is fake and lives in the browser (localStorage), so nothing is sent anywhere.
 

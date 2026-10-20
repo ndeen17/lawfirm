@@ -57,7 +57,7 @@ export function PayForm({ pay, amount, hideLabel }) {
       {method === 'Bank transfer' && (
         <div className="pay-info">
           <div><span>Bank</span><strong>Harbor Trust Bank</strong></div>
-          <div><span>Account name</span><strong>Harbor &amp; Vale Legal</strong></div>
+          <div><span>Account name</span><strong>John &amp; Doe Legal</strong></div>
           <div><span>Account number</span><strong>0123456789</strong></div>
           <div><span>Amount</span><strong>{naira(amount)}</strong></div>
           <span className="muted-sm">Demo mode: confirm below to simulate receiving your transfer.</span>

@@ -17,10 +17,10 @@ function icsFor(appt, area, lawyer) {
   const [y, m, d] = appt.date.split('-');
   const stamp = (t) => `${y}${m}${d}T${t.replace(':', '')}00`;
   return [
-    'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Harbor & Vale Legal//Booking//EN', 'BEGIN:VEVENT',
+    'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//John & Doe Legal//Booking//EN', 'BEGIN:VEVENT',
     `UID:${appt.id}@harborvale.legal`, `DTSTAMP:${stamp('00:00')}`,
     `DTSTART:${stamp(appt.time)}`, `DTEND:${stamp(addMinutes(appt.time, appt.dur))}`,
-    `SUMMARY:Consultation with ${lawyer.name} (${area.bookName})`, 'LOCATION:Harbor & Vale Legal', 'END:VEVENT', 'END:VCALENDAR',
+    `SUMMARY:Consultation with ${lawyer.name} (${area.bookName})`, 'LOCATION:John & Doe Legal', 'END:VEVENT', 'END:VCALENDAR',
   ].join('\r\n');
 }
 
@@ -247,7 +247,7 @@ export default function Booking() {
                     <PayForm pay={pay} amount={area.fee} />
                     <label className="check">
                       <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
-                      <span>I understand booking a consultation doesn’t make Harbor &amp; Vale my lawyers until we sign an engagement letter, and I agree to the privacy notice.{errors.consent && <span className="field-error"> {errors.consent}</span>}</span>
+                      <span>I understand booking a consultation doesn’t make John &amp; Doe my lawyers until we sign an engagement letter, and I agree to the privacy notice.{errors.consent && <span className="field-error"> {errors.consent}</span>}</span>
                     </label>
                   </div>
                 )}

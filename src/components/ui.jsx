@@ -7,7 +7,7 @@ export function Logo({ to = '/', size = 'lg', light = false, tagline = true, sub
   const navy = light ? '#FFFFFF' : '#1C2B4B';
   const accent = light ? '#E3A27F' : '#A4512A';
   return (
-    <Link to={to} className={`logo logo-${size}`} aria-label="Harbor & Vale Legal home">
+    <Link to={to} className={`logo logo-${size}`} aria-label="John & Doe Legal home">
       <svg width={w} height={Math.round((w * 34) / 40)} viewBox="0 0 40 34" aria-hidden="true">
         <polygon points="8,0 18,0 10,34 0,34" fill={navy} />
         <polygon points="22,0 32,0 24,34 14,34" fill={accent} />
@@ -15,7 +15,7 @@ export function Logo({ to = '/', size = 'lg', light = false, tagline = true, sub
       </svg>
       <span className="logo-text">
         <span className="logo-name" style={{ color: navy }}>
-          Harbor &amp; Vale <span style={{ color: accent }}>Legal</span>
+          John &amp; Doe <span style={{ color: accent }}>Legal</span>
         </span>
         {sub ? <span className="logo-tag">{sub}</span> : tagline && size === 'lg' ? <span className="logo-tag">FAMILY &nbsp;|&nbsp; PROPERTY &nbsp;|&nbsp; CORPORATE &nbsp;|&nbsp; DISPUTES</span> : null}
       </span>

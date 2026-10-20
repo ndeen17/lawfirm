@@ -124,7 +124,7 @@ export default function Home() {
           <div className="split-l stack-22">
             <Eyebrow>ABOUT THE FIRM</Eyebrow>
             <h2 className="h2">A Lagos firm built on clear advice and <em>close relationships</em></h2>
-            <p className="lead">Harbor &amp; Vale was founded in {FIRM.founded} by Adaeze Okafor and Tunde Bakare on a simple belief: legal advice should be easy to reach, easy to understand and fairly priced.</p>
+            <p className="lead">John &amp; Doe was founded in {FIRM.founded} by Adaeze Okafor and Tunde Bakare on a simple belief: legal advice should be easy to reach, easy to understand and fairly priced.</p>
             <p className="lead">Our four lawyers and support team work from Victoria Island and Abuja, acting for individuals and families through difficult moments, and for businesses that need a dependable partner as they grow.</p>
             <Link to="/about" className="link-under self-start">Our story and team</Link>
           </div>
