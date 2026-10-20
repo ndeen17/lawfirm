@@ -90,8 +90,6 @@ function QuickBook() {
 
 export default function Home() {
   const { db } = useStore();
-  const section = useSectionNav();
-  void section;
   const statements = [
     ['Plain-language advice', 'Your options, the risks and a realistic timeline — and the key points in writing after every consultation.'],
     ['Fixed fees where we can', 'Most work is quoted as a fixed fee or in clear stages, agreed in an engagement letter before we begin.'],
@@ -190,7 +188,7 @@ export default function Home() {
                   <div className="lawyer-ph"><span>{l.initials}</span></div>
                   <span className="lawyer-meta">
                     <span className="lawyer-name">{l.name}</span>
-                    <span className="lawyer-role">{l.short.replace('Family', 'Family').replace(' · ', ' · ')}</span>
+                    <span className="lawyer-role">{l.short}</span>
                     <span className="lawyer-next">{n ? `Next free: ${relativeDay(n.date) === 'Today' || relativeDay(n.date) === 'Tomorrow' ? relativeDay(n.date) : dowTitle(parseISO(n.date))} ${n.time}` : 'See availability'} &nbsp;→</span>
                   </span>
                 </Link>
